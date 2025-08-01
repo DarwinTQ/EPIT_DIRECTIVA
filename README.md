@@ -1,24 +1,89 @@
-# Free Next JS Starter Template
+# EPIT - UNSA | Sitio Web de Prácticas Preprofesionales
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=A%20minimal%20Next.js%20template%20for%20building%20SaaS%20websites%20with%20only%20the%20essential%20dependencies.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F7guUYce8M9UWWL2id1Out%2F432b98af389e3b9605804849a726a258%2Fsaas.png&demo-title=Minimal%20Next.js%20SaaS%20Website%20Starter&demo-url=https%3A%2F%2Fnextjs-saas-starter-template.vercel.app%2F&from=templates&project-name=Minimal%20Next.js%20SaaS%20Website%20Starter&repository-name=next-js-saas-website-starter&repository-url=https%3A%2F%2Fgithub.com%2Ftalhatahir%2Fnextjs-saas-starter-template&skippable-integrations=1)
+## 📋 Descripción
 
-This is a starter template for a SaaS application built with Next.js. It uses the minimum amount of dependencies and tools to get you started.
-Tailwind CSS is used for styling, and Next Themes is used for dark mode. React Icons is used for icons.
+Sitio web oficial de la **Escuela Profesional de Ingeniería en Telecomunicaciones (EPIT)** de la Universidad Nacional de San Agustín (UNSA), dedicado a la gestión y información sobre el programa de prácticas preprofesionales.
 
-<img width="1525" alt="image" src="https://github.com/user-attachments/assets/68db6585-3807-49c0-89fc-7a298c2abb02">
+Este proyecto presenta la **Directiva N° 001-2024-EIT** que establece el Plan de Capacitación para estudiantes de Ingeniería en Telecomunicaciones.
 
-### How to use
+## 🚀 Características
 
-1. Clone the repository
-2. Install dependencies `npm install`
-3. Run the development server `npm run dev`
+- **Página principal**: Información general sobre el programa de prácticas preprofesionales
+- **Plan de Capacitación**: Documento completo con objetivos, actividades formativas y normativas
+- **Diseño responsivo**: Compatible con dispositivos móviles y desktop
+- **Interfaz moderna**: Utiliza HTML5, CSS3 y JavaScript vanilla
 
-### Features
+## 📁 Estructura del Proyecto
 
-- Next.js 14 with app router
-- Prebuilt components for a quick start
-- Tailwind CSS
-- Next Themes for dark mode
-- React Icons
+```
+├── index.html                 # Página principal
+├── plan-capacitacion.html     # Plan de capacitación completo
+├── style.css                  # Estilos principales
+├── styles/
+│   ├── globals.css           # Estilos globales
+│   └── img/                  # Imágenes del sitio
+│       ├── epit_web.png      # Logo EPIT
+│       ├── Escudo_UNSA.png   # Escudo UNSA
+│       └── logo_epit.jfif    # Logo EPIT alternativo
+└── README.md                 # Este archivo
+```
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/talhatahir)
+## 🎯 Objetivos del Programa
+
+El programa de prácticas preprofesionales busca que los estudiantes alcancen:
+
+1. **Dominio técnico** del área específica de telecomunicaciones
+2. **Conocimiento del sector** operativo y tecnológico
+3. **Destrezas técnicas** para el ejercicio profesional
+4. **Competencias comunicativas** especializadas
+5. **Capacidades de trabajo en equipo** multidisciplinario
+6. **Redacción técnica** de informes y documentación
+7. **Respeto profesional** por la formación universitaria
+
+## 🏢 Para Empresas
+
+El sitio web incluye información detallada sobre:
+
+- **Actividades formativas** permitidas para practicantes
+- **Actividades prohibidas** que no aportan valor formativo
+- **Monitoreo y evaluación** del proceso formativo
+- **Responsabilidades** del centro de prácticas
+
+## 🛠️ Tecnologías Utilizadas
+
+- **HTML5**: Estructura semántica del contenido
+- **CSS3**: Estilos y diseño responsivo
+- **JavaScript**: Interactividad y navegación suave
+- **Flexbox/Grid**: Layout moderno y flexible
+
+## 📖 Páginas del Sitio
+
+### Página Principal (`index.html`)
+- Hero section con información institucional
+- Sección de características del programa
+- Información sobre prácticas preprofesionales
+- Sección "Acerca de" con detalles formativos
+- Footer con información de contacto
+
+### Plan de Capacitación (`plan-capacitacion.html`)
+- Documento oficial de la Directiva N° 001-2024-EIT
+- Objetivos del plan de capacitación
+- Actividades formativas detalladas
+- Actividades prohibidas
+- Procedimientos de monitoreo y evaluación
+
+## 📧 Contacto
+
+- **Email**: epit@unsa.edu.pe
+- **Website**: [fips.unsa.edu.pe/telecomunicaciones](https://fips.unsa.edu.pe/telecomunicaciones)
+- **Dirección**: Av. Paucarpata S/N con Av. Venezuela S/N, Arequipa, Perú
+
+## 📄 Licencia
+
+© 2025 FIPS - UNSA. Todos los derechos reservados.
+
+---
+
+**Escuela Profesional de Ingeniería en Telecomunicaciones**  
+**Facultad de Ingeniería de Producción y Servicios**  
+**Universidad Nacional de San Agustín - UNSA**
