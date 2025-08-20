@@ -10,7 +10,7 @@
     --color-secondary: #059669;
     --color-accent: #7c3aed;
     
-    /* Colores neutros */
+    /* Colores neutros mejorados */
     --color-gray-50: #f8fafc;
     --color-gray-100: #f1f5f9;
     --color-gray-200: #e2e8f0;
@@ -18,6 +18,18 @@
     --color-gray-600: #475569;
     --color-gray-700: #334155;
     --color-gray-900: #0f172a;
+    
+    /* Colores de texto mejorados */
+    --text-primary: #1a202c;      /* Negro suave para títulos */
+    --text-secondary: #2d3748;    /* Gris muy oscuro para subtítulos */
+    --text-body: #4a5568;         /* Gris medio para cuerpo de texto */
+    --text-light: #718096;        /* Gris claro para texto secundario */
+    --text-white: #ffffff;
+    
+    /* Colores de fondo */
+    --bg-primary: #ffffff;
+    --bg-secondary: #ffffff;
+    --bg-accent: #ffffff;
     
     /* Tipografía */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -59,8 +71,8 @@ html {
 
 body {
     font-family: var(--font-primary);
-    background-color: white;
-    color: black;
+    background-color: var(--bg-primary);
+    color: var(--text-body);
     line-height: 1.65;
     font-weight: 400;
     letter-spacing: -0.006em;
@@ -102,7 +114,6 @@ body {
 /* Header rediseñado con enfoque minimalista */
 .header {
     background-color: rgba(255, 255, 255, 0.98);
-    border-bottom: 1px solid var(--color-gray-200);
     backdrop-filter: blur(12px) saturate(180%);
     position: fixed;
     top: 0;
@@ -164,7 +175,7 @@ body {
 .navbar-brand span {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     letter-spacing: -0.02em;
     font-family: var(--font-secondary);
     white-space: nowrap; /* Evitar que el texto se corte */
@@ -229,7 +240,7 @@ body {
 
 .navbar-menu a,
 .navbar-link {
-    color: black;
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9375rem;
@@ -256,7 +267,7 @@ body {
 
 .navbar-menu a:hover,
 .navbar-link:hover {
-    color: var(--color-gray-900);
+    color: var(--text-primary);
 }
 
 .navbar-menu a:hover::after,
@@ -309,7 +320,6 @@ body.menu-open {
         transform: translateY(-10px);
         transition: all var(--transition-normal);
         z-index: 999; /* Menor que el header pero mayor que el contenido */
-        border-top: 1px solid var(--color-gray-200);
         box-shadow: var(--shadow-lg);
         display: flex; /* Override the display: none */
     }
@@ -407,7 +417,7 @@ body.menu-open {
 .hero {
     min-height: 100vh;
     padding: 0;
-    background: white;
+    background: #ffffff;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -433,7 +443,7 @@ body.menu-open {
 .hero-title {
     font-size: clamp(2.25rem, 5vw, 4rem);
     font-weight: 700;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     line-height: 1.1;
     letter-spacing: -0.04em;
@@ -493,7 +503,7 @@ body.menu-open {
 }
 
 .typewriter-line:first-child {
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     font-weight: 700;
 }
 
@@ -590,7 +600,7 @@ body.menu-open {
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: var(--color-gray-600);
+    color: var(--text-body);
     margin-bottom: var(--spacing-2xl);
     max-width: 42rem;
     margin-left: auto;
@@ -639,9 +649,8 @@ body.menu-open {
 }
 
 .btn-secondary {
-    background-color: white;
-    border: 1.5px solid var(--color-gray-300);
-    color: var(--color-gray-700);
+    background-color: #ffffff;
+    color: var(--text-secondary);
     font-weight: 500;
     padding: 0.875rem 2.5rem;
     border-radius: var(--border-radius);
@@ -651,10 +660,10 @@ body.menu-open {
     align-items: center;
     font-size: 0.9375rem;
     letter-spacing: -0.006em;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-    border-color: var(--color-primary);
     color: var(--color-primary);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
@@ -677,17 +686,17 @@ body.menu-open {
 }
 
 .section-white {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .section-gray {
-    background-color: var(--color-gray-50);
+    background-color: #ffffff;
 }
 
 .section-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     text-align: center;
     letter-spacing: -0.025em;
@@ -697,7 +706,7 @@ body.menu-open {
 
 .section-subtitle {
     font-size: 1.125rem;
-    color: var(--color-gray-600);
+    color: var(--text-body);
     max-width: 42rem;
     margin: 0 auto var(--spacing-2xl);
     text-align: center;
@@ -742,9 +751,8 @@ body.menu-open {
 .feature-card {
     text-align: center;
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background-color: white;
+    background-color: #ffffff;
     border-radius: var(--border-radius-lg);
-    border: 1px solid var(--color-gray-200);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
@@ -764,7 +772,6 @@ body.menu-open {
 .feature-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-gray-300);
 }
 
 .feature-card:hover::before {
@@ -821,14 +828,14 @@ body.menu-open {
 .feature-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.01em;
     font-family: var(--font-secondary);
 }
 
 .feature-description {
-    color: black;
+    color: var(--text-body);
     font-size: 0.9375rem;
     line-height: 1.6;
     letter-spacing: -0.006em;
@@ -836,10 +843,9 @@ body.menu-open {
 
 /* Info cards rediseñadas con mejor jerarquía */
 .info-card {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-2xl);
-    border: 1px solid var(--color-gray-200);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
@@ -860,7 +866,6 @@ body.menu-open {
 .info-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-gray-300);
 }
 
 .info-card:hover::after {
@@ -883,14 +888,14 @@ body.menu-open {
 .info-card-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.01em;
     font-family: var(--font-secondary);
 }
 
 .info-card-description {
-    color: black;
+    color: var(--text-body);
     font-size: 0.9375rem;
     line-height: 1.65;
     letter-spacing: -0.006em;
@@ -908,7 +913,7 @@ body.menu-open {
 .about-title {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
-    color: var(--color-gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     letter-spacing: -0.025em;
     line-height: 1.2;
@@ -918,7 +923,7 @@ body.menu-open {
 .about-description {
     font-size: 1.125rem;
     font-weight: 400;
-    color: var(--color-gray-600);
+    color: var(--text-body);
     margin-bottom: var(--spacing-xl);
     line-height: 1.6;
     letter-spacing: -0.008em;
@@ -950,7 +955,7 @@ body.menu-open {
 }
 
 .about-feature span {
-    color: var(--color-gray-600);
+    color: var(--text-body);
     font-size: 0.9375rem;
     line-height: 1.6;
     letter-spacing: -0.006em;
@@ -1002,7 +1007,7 @@ body.menu-open {
 
 /* Footer rediseñado con mejor estructura */
 .footer {
-    background: linear-gradient(135deg, var(--color-gray-900) 0%, #0c1426 100%);
+    background: rgb(3, 3, 46);
     color: white;
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
     position: relative;
@@ -1179,9 +1184,9 @@ body.menu-open {
 .space-y-4 > * + * { margin-top: var(--spacing-lg); }
 
 /* Estilos específicos para Plan de Capacitación mejorados */
-.bg-gray-50 { background-color: var(--color-gray-50); }
-.bg-white { background-color: white; }
-.bg-gray-100 { background-color: var(--color-gray-100); }
+.bg-gray-50 { background-color: #ffffff; }
+.bg-white { background-color: #ffffff; }
+.bg-gray-100 { background-color: #ffffff; }
 
 .bg-blue-50 { background-color: #eff6ff; }
 .bg-blue-100 { background-color: #dbeafe; }
@@ -1192,11 +1197,11 @@ body.menu-open {
 .text-blue-800 { color: #1e40af; }
 .text-blue-900 { color: var(--color-primary-dark); }
 .text-red-500 { color: #ef4444; }
-.text-gray-600 { color: var(--color-gray-600); }
-.text-gray-700 { color: black; }
-.text-gray-800 { color: #1e293b; }
-.text-gray-900 { color: black; }
-.text-white { color: white; }
+.text-gray-600 { color: var(--text-body); }
+.text-gray-700 { color: var(--text-secondary); }
+.text-gray-800 { color: var(--text-primary); }
+.text-gray-900 { color: var(--text-primary); }
+.text-white { color: var(--text-white); }
 
 .bg-green-500 { background-color: var(--color-secondary); }
 .bg-blue-500 { background-color: var(--color-primary-light); }
@@ -1226,8 +1231,6 @@ body.menu-open {
 .object-cover { object-fit: cover; }
 
 .shadow-lg { box-shadow: var(--shadow-lg); }
-.border { border: 1px solid var(--color-gray-200); }
-.border-gray-200 { border-color: var(--color-gray-200); }
 
 .border-b-2 { border-bottom-width: 2px; }
 .border-l-4 { border-left-width: 4px; }
@@ -1257,7 +1260,7 @@ body.menu-open {
     margin-right: auto; 
     max-width: 65ch; 
     line-height: 1.65;
-    color: black;
+    color: var(--text-body);
 }
 
 .gap-4 { gap: var(--spacing-lg); }
