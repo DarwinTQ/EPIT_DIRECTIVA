@@ -415,13 +415,14 @@ body.menu-open {
 
 /* Hero Section rediseñado con enfoque más elegante - Full height */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     padding: 0;
     background: #ffffff;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: -5rem; /* Compensar el padding-top del body */
+    padding-top: 5rem; /* Agregar el padding internamente */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1381,5 +1382,128 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+/* Mouse Scroll Indicator */
+.bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.smooth-scroll {
+    display: block;
+    text-decoration: none;
+}
+
+.mouse-icon {
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.mouse-icon:hover {
+    border-color: var(--color-primary-light);
+    transform: scale(1.1);
+}
+
+.scroll {
+    width: 4px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-down 1.5s infinite;
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) translateY(8px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(-50%) translateY(16px);
+        opacity: 0;
+    }
+}
+
+/* Responsive para mouse scroll */
+@media (max-width: 767px) {
+    .bottom {
+        bottom: 1.5rem;
+    }
+    
+    .mouse-icon {
+        width: 20px;
+        height: 35px;
+        border-radius: 10px;
+    }
+    
+    .scroll {
+        width: 3px;
+        height: 6px;
+        top: 5px;
+    }
+    
+    @keyframes scroll-down {
+        0% {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(-50%) translateY(6px);
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateX(-50%) translateY(12px);
+            opacity: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .bottom {
+        bottom: 3rem;
+    }
+    
+    .mouse-icon {
+        width: 28px;
+        height: 45px;
+        border-radius: 14px;
+    }
+    
+    .scroll {
+        width: 5px;
+        height: 10px;
+        top: 7px;
+    }
+    
+    @keyframes scroll-down {
+        0% {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(-50%) translateY(10px);
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateX(-50%) translateY(20px);
+            opacity: 0;
+        }
     }
 }
