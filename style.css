@@ -76,9 +76,26 @@ body {
     padding: 0 var(--spacing-lg);
 }
 
+/* Contenedor específico para secciones de altura completa */
+.section .container,
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-xl);
+}
+
 @media (min-width: 640px) {
     .container {
         padding: 0 var(--spacing-xl);
+    }
+    
+    .section .container,
+    .hero .container {
+        padding: var(--spacing-2xl);
     }
 }
 
@@ -386,14 +403,18 @@ body.menu-open {
     }
 }
 
-/* Hero Section rediseñado con enfoque más elegante */
+/* Hero Section rediseñado con enfoque más elegante - Full height */
 .hero {
-    padding: var(--spacing-2xl) 0 5rem; /* Reducir padding superior */
+    min-height: 100vh;
+    padding: 0;
     background: linear-gradient(135deg, #ffffff 0%, var(--color-gray-50) 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 0; /* Remover margen superior ya que body tiene padding-top */
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero::before {
@@ -508,10 +529,10 @@ body.menu-open {
     }
 }
 
-/* Responsive para efecto typewriter */
+/* Responsive para secciones de altura completa */
 @media (max-width: 639px) {
     .hero-title {
-        min-height: 6rem;
+        min-height: 4rem;
         font-size: clamp(1.75rem, 4vw, 2.25rem);
     }
     
@@ -519,11 +540,20 @@ body.menu-open {
         font-size: clamp(1.75rem, 4vw, 2.25rem);
         line-height: 1.2;
     }
+    
+    .section .container,
+    .hero .container {
+        padding: var(--spacing-lg);
+    }
+    
+    .grid {
+        gap: var(--spacing-lg);
+    }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
     .hero-title {
-        min-height: 7rem;
+        min-height: 6rem;
         font-size: clamp(2rem, 4.5vw, 3rem);
     }
     
@@ -637,9 +667,13 @@ body.menu-open {
     }
 }
 
-/* Secciones rediseñadas con mejor jerarquía visual */
+/* Secciones rediseñadas con mejor jerarquía visual - Full height */
 .section {
-    padding: var(--spacing-3xl) 0;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-white {
@@ -672,14 +706,25 @@ body.menu-open {
     letter-spacing: -0.008em;
 }
 
-/* Grid layouts mejorados */
+/* Grid layouts mejorados para secciones de altura completa */
 .grid {
     display: grid;
     gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 1200px;
 }
 
 .grid-cols-1 {
     grid-template-columns: 1fr;
+}
+
+/* Espaciado mejorado para elementos centrados */
+.text-center {
+    text-align: center;
+}
+
+.mb-12 {
+    margin-bottom: var(--spacing-3xl);
 }
 
 @media (min-width: 768px) {
@@ -851,11 +896,13 @@ body.menu-open {
     letter-spacing: -0.006em;
 }
 
-/* About section rediseñada */
+/* About section rediseñada para altura completa */
 .about-content {
     display: grid;
     gap: var(--spacing-3xl);
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .about-title {
