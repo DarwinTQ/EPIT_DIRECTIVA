@@ -1,0 +1,175 @@
+/* Responsive Design Improvements */
+
+/* Mejoras específicas para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .feature-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mejoras para pantallas móviles */
+@media (max-width: 639px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero {
+        padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: 0.875rem;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .feature-card, .info-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .feature-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        text-align: center;
+    }
+    
+    .footer-brand {
+        justify-content: center;
+    }
+    
+    /* Centrado específico para imagen QR en móviles */
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links img {
+        width: 5rem !important;
+        height: auto !important;
+        margin: var(--spacing-lg) auto !important;
+        display: block !important;
+    }
+    
+    /* Plan de capacitación responsive */
+    .w-24, .w-28, .w-32 {
+        width: 4rem;
+    }
+    
+    .h-24, .h-28, .h-32 {
+        height: 4rem;
+    }
+    
+    .text-xl { font-size: 1.125rem; }
+    .text-2xl { font-size: 1.25rem; }
+    .text-3xl { font-size: 1.5rem; }
+    .text-4xl { font-size: 1.75rem; }
+    
+    .space-x-6 > * + * {
+        margin-left: var(--spacing-lg);
+    }
+}
+
+/* Mejoras para impresión */
+@media print {
+    .header, .footer, .hero-buttons, .btn-primary, .btn-secondary {
+        display: none !important;
+    }
+    
+    .hero {
+        background: none !important;
+        padding: var(--spacing-lg) 0 !important;
+    }
+    
+    .section {
+        padding: var(--spacing-lg) 0 !important;
+    }
+    
+    .feature-card, .info-card {
+        box-shadow: none !important;
+        border: 1px solid var(--color-gray-300) !important;
+        break-inside: avoid;
+    }
+    
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* Mejoras de accesibilidad para lectores de pantalla */
+@media (prefers-reduced-motion: reduce) {
+    .feature-card::before,
+    .info-card::after,
+    .about-visual img:hover,
+    .about-placeholder:hover {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* Modo oscuro (para futuras implementaciones) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-gray-50: #0f172a;
+        --color-gray-100: #1e293b;
+        --color-gray-200: #334155;
+        --color-gray-300: #475569;
+        --color-gray-600: #cbd5e1;
+        --color-gray-700: #e2e8f0;
+        --color-gray-900: #f8fafc;
+    }
+    
+    .section-white {
+        background-color: #1e293b;
+    }
+    
+    .section-gray {
+        background-color: #0f172a;
+    }
+}

@@ -6,6 +6,7 @@
     <title>Plan de Capacitación - EPIT UNSA</title>
     <link rel="icon" type="image/x-icon" href="styles/img/Escudo_UNSA.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
@@ -13,14 +14,28 @@
         <nav class="container navbar">
             <div class="navbar-content">
                 <a href="index.html" class="navbar-brand">
-                    <img src="styles/img/Escudo_UNSA.png" alt="UNSA">
+                    <img src="styles/img/Escudo_UNSA.png" alt="UNSA" loading="lazy">
                     <span>EPIT - UNSA</span>
                 </a>
-                <div class="navbar-menu">
-                    <a href="index.html">Inicio</a>
-                    <a href="index.html#informacion">Información</a>
-                    <a href="plan-capacitacion.html">Plan de Capacitación</a>
-                    <a href="index.html#contacto">Contacto</a>
+                
+                <!-- Mobile menu button -->
+                <button class="navbar-toggle" id="mobile-menu-button" 
+                        aria-label="Abrir menú de navegación" 
+                        aria-expanded="false" 
+                        aria-controls="mobile-menu">
+                    <svg class="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                
+                <div class="navbar-menu" id="mobile-menu" aria-hidden="true">
+                    <a href="index.html" class="navbar-link">Inicio</a>
+                    <a href="index.html#informacion" class="navbar-link">Información</a>
+                    <a href="plan-capacitacion.html" class="navbar-link">Plan de Capacitación</a>
+                    <a href="index.html#contacto" class="navbar-link">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -31,16 +46,8 @@
             <!-- Encabezado de la institución -->
             <div class="text-center mb-12 bg-white rounded-lg shadow-lg p-8 border border-gray-200">
                 <div class="flex justify-center items-center space-x-6 mb-6">
-                    <img
-                        src="styles/img/Escudo_UNSA.png"
-                        alt="Logo UNSA"
-                        class="w-24 h-auto sm:w-28 md:w-32"
-                    />
-                    <img
-                        src="styles/img/logo_epit.jfif"
-                        alt="Logo EPIT"
-                        class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover"
-                    />
+                    <img src="styles/img/Escudo_UNSA.png" alt="Logo UNSA" class="w-24 h-auto sm:w-28 md:w-32" loading="lazy" />
+                    <img src="styles/img/logo_epit.jfif" alt="Logo EPIT" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover" loading="lazy" />
                 </div>
                 <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                     FACULTAD DE INGENIERÍA DE PRODUCCIÓN Y SERVICIOS
@@ -54,7 +61,7 @@
                         PLAN DE CAPACITACIÓN
                     </h2>
                     <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-blue-800">
-                        DIRECTIVA N° 001-2024-EIT
+                        DIRECTIVA N° 001-2025-EPIT
                     </h3>
                 </div>
                 
@@ -63,7 +70,7 @@
                         PRÁCTICAS PREPROFESIONALES
                     </h3>
                     <p class="text-lg sm:text-xl text-gray-700">
-                        Oficina de Prácticas Preprofesionales EIT
+                        Oficina de Prácticas Preprofesionales EPIT
                     </p>
                 </div>
             </div>
@@ -294,59 +301,56 @@
         </div>
     </div>
     <!-- Footer -->
-            <footer class="footer" id="contacto">
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div>
                     <div class="footer-brand">
-                        <img src="styles/img/Escudo_UNSA.png" alt="UNSA">
+                        <img src="styles/img/Escudo_UNSA.png" alt="UNSA" loading="lazy">
                         <span>FIPS - UNSA</span>
-                        
                     </div>
                     <h3>FACULTAD</h3>
                     <p class="footer-description">
-                        FIPS - UNSA
+                        Facultad de Ingeniería de Producción y Servicios - UNSA
                     </p>
                     <h3>ESCUELA PROFESIONAL</h3>
                     <p class="footer-description">
-                        Programa de Estudios Ingeniería En Telecomunicaciones
+                        Programa de Estudios de Ingeniería en Telecomunicaciones
                     </p>
-                    <p><strong>Web Site</strong></p>
-                        <p>🌐 <a href="https://fips.unsa.edu.pe/telecomunicaciones" target="_blank">fips.unsa.edu.pe/telecomunicaciones</a></p>
-                        <br>
-                        <p><strong>E-mail</strong></p>
-                        <p>📧 <a href="mailto:epit@unsa.edu.pe">epit@unsa.edu.pe</a></p>
-                        <p>🌐Inf. Seg. <a href="https://fad.unsa.edu.pe/bancayseguros/seguro-estudiantil/" target="_blank">https://fad.unsa.edu.pe/bancayseguros/seguro-estudiantil/</a></p>
+                    
+                    <strong>Sitio Web</strong>
+                    <p>🌐 <a href="https://fips.unsa.edu.pe/telecomunicaciones" target="_blank" rel="noopener">fips.unsa.edu.pe/telecomunicaciones</a></p>
+                    
+                    <strong>Correo Electrónico</strong>
+                    <p>📧 <a href="mailto:epit@unsa.edu.pe">epit@unsa.edu.pe</a></p>
+
                 </div>
                 <div class="footer-section">
                     <h3>Enlaces</h3>
                     <ul class="footer-links">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#informacion">Información</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#informacion">Información</a></li>
                         <li><a href="plan-capacitacion.html">Plan de Capacitación</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
                     </ul>
+                    <div class="qr-container">
+                        <img src="styles/img/qr_directiva.png" alt="Código QR - Directiva EPIT" class="qr-code" loading="lazy" />
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <div class="footer-contact">
-                        <p><strong>DIRECCIÓN</strong></p>
-                        <p>� Esquina Av. Paucarpata S/N con Av. Venezuela S/N, Arequipa, Perú</p>
+                        <strong>Dirección</strong>
+                        <p>📍 Esquina Av. Paucarpata S/N con Av. Venezuela S/N</p>
+                        <p>Arequipa, Perú</p>
                         <p>🏢 Área de Ingenierías UNSA</p>
-                        <p>🏛️ Pabellón de Ing. En Telecomunicaciones</p>
-                        <br>
-                        <p><strong>TELÉFONO</strong></p>
+                        <p>🏛️ Pabellón de Ing. en Telecomunicaciones</p>
+                        
+                        <strong>Teléfono</strong>
                         <p>📞 +51 54</p>
-                        <br>
-                
                     </div>
                 </div>
-                <div class="footer-section">
-                    <img
-                        src="styles/img/qr_directiva.png"
-                        alt="Logo UNSA"
-                        class="w-24 h-auto sm:w-28 md:w-32"
-                    />
-                </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 FIPS - UNSA. Todos los derechos reservados.</p>
@@ -354,16 +358,6 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling para los enlaces
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
